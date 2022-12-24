@@ -6,7 +6,7 @@ import { SideBarContext } from "./components/Contexts";
 import Head from "./components/Head";
 import SideMenu from "./components/SideMenu";
 import Scripts from "./components/Scripts";
-import { Users, Home } from "./screens";
+import { Users, Home, AddUsers } from "./screens";
 function App() {
   const [showSideMenu, setShowSideMenu] = useState(false);
   const value = { showSideMenu, setShowSideMenu };
@@ -18,7 +18,7 @@ function App() {
         <SideMenu />
         <Routes>
           <Route path="/" element={<Home />} />
-
+          <Route path="/AddUsers" element={<AddUsers />} />
           <Route path="/Users" element={<Users />} />
         </Routes>
         <Scripts />

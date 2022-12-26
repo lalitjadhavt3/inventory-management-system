@@ -1,28 +1,21 @@
-import React, { useContext, useState } from "react";
+import React from "react";
 import { NavLink } from "react-router-dom";
-import { SideBarContext } from "./Contexts";
 
-function SideMenu() {
-  const { showSideMenu, setShowSideMenu } = useContext(SideBarContext);
-
+function SideMenu({ closeMenu }) {
   return (
-    <div className="side-menu" id="sidebar-menu" style={{ width: "50%" }}>
-      <div className="close-btn">
+    <div className="side-menu show-menu" style={{ width: "50%" }}>
+      <div className="close-btn" onClick={closeMenu}>
         <span className="material-icons">close</span>
       </div>
       <ul>
         <li>
-          <NavLink to="/" onClick={() => setShowSideMenu(false)}>
+          <NavLink to="/" onClick={closeMenu}>
             <span className="material-icons">dashboard</span>
             Dashboard
           </NavLink>
         </li>
         <li>
-          <NavLink
-            className=""
-            to="/Users"
-            onClick={() => setShowSideMenu(false)}
-          >
+          <NavLink className="" to="/Users" onClick={closeMenu}>
             <span className="material-icons">date_range</span>
             Users
           </NavLink>

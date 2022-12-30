@@ -26,7 +26,7 @@ function UserCard({ user }) {
         </div>
         <div className="pat-info-cont">
           <h4 className="pat-name">
-            <a href="patient-profile.html">{user.name}</a>
+            <a href="patient-profile.html">{`${user.firstName} ${user.lastName}`}</a>
           </h4>
           <div className="patient-details-col">
             <span>{`${user.age} Years, ${user.gender}`}</span>
@@ -39,25 +39,25 @@ function UserCard({ user }) {
           </div>
         </div>
       </div>
-      <div class="status-col">
-        <div class="status-btn">
-          <a href="#" class="btn view-eye">
+      <div className="status-col">
+        <div className="status-btn">
+          <a href="#" className="btn view-eye">
             <i>
               <img src="assets/img/icon-awesome-eye.svg" alt="" />
             </i>
             View
           </a>
         </div>
-        <div class="status-btn">
-          <a href="#" class="btn success">
+        <div className="status-btn">
+          <a href="#" className="btn success">
             <i>
               <img src="assets/img/icon-checkmark.svg" alt="" />
             </i>
             Confirm
           </a>
         </div>
-        <div class="status-btn">
-          <a href="#" class="btn print">
+        <div className="status-btn">
+          <a href="#" className="btn print">
             <i>
               <img src="assets/img/icon-metro-printer.svg" alt="" />
             </i>
